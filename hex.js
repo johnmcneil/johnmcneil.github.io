@@ -40,7 +40,7 @@ Highcharts.chart('container', {
 		}, {
 			from: 41,
 			to: 50,
-			color: 'red'
+			color: 'darkgoldenrod'
 		}]
 	},
 
