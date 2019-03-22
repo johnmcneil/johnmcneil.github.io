@@ -1,4 +1,3 @@
 # johnmcneil.github.io
-# this is my github page
-# it's focused on my data visualization web projects
-# for my full web development portfolio (and more about me) please see my personal website https://www.johnmcneil.me
+# My GitHub page is focused on data visualization projects.
+# For my full portfolion visit https://www.johnmcneil.me
