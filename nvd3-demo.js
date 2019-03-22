@@ -1,4 +1,4 @@
- [
+[
       {
         "label": "One",
         "value" : 29.765957771107
@@ -46,3 +46,4 @@ nv.addGraph(function() {
 
   return chart;
 });
+console.log("nvd3-demo here");
