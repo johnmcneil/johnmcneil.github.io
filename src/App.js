@@ -13,7 +13,7 @@ import './App.css';
 function App() {
   return (
     <Router>
-    <NavBar />
+  {/*    <NavBar /> */}
       <div className="App">
         <Route path="/" component={HomePage} exact />
         <Route path="/about" component={AboutPage} />
