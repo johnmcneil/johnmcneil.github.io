@@ -13,6 +13,7 @@ import mn350 from '../img/mn350.png';
 import mn350action from '../img/mn350action.png';
 import github from '../img/github.png';
 import qomb from '../img/qomb.png';
+import federalcourt from '../img/federalcourt-screenshot.png';
 
 
 
@@ -41,6 +42,11 @@ const items = [
 		src: mn350action, 
 		altText: "mn350action.org",
 		caption: "WordPress site maintenance, theme development and content management"
+	},
+	{
+		src: federalcourt, 
+		altText: "federalcourtreportersllc",
+		caption: "WordPress theme development and domain name registration and hosting"
 	},
 	{
 		src: github, 

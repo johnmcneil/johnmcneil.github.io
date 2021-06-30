@@ -6,12 +6,16 @@
   text-align:  center;
 }
 
-.wordcloud-row {
-  height:  150px;
+.title-row h2, .title-row h3 {
+  text-align: center;
 }
 
-.carousel-row {
-  height:  100px;
+.title-row {
+  margin-bottom: 2%;
+}
+
+.wordcloud-row {
+  height:  150px;
 }
 
 .carousel-row img {
