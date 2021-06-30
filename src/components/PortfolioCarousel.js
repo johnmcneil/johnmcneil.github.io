@@ -9,6 +9,12 @@ import {
 import chessgraphs from '../img/chessgraphs.png';
 import johnmcneilme from '../img/johnmcneilme.png';
 import kataymeloglu from '../img/kataymeloglu.png';
+import mn350 from '../img/mn350.png';
+import mn350action from '../img/mn350action.png';
+import github from '../img/github.png';
+import qomb from '../img/qomb.png';
+
+
 
 const items = [
 	{
@@ -25,7 +31,27 @@ const items = [
 		src: kataymeloglu, 
 		altText: "kataymeloglu.com",
 		caption: "Artist portfolio website featuring a custom WordPress theme."
-	}
+	},
+	{
+		src: mn350, 
+		altText: "mn350.org",
+		caption: "WordPress site maintenance, theme development and content management"
+	},
+	{
+		src: mn350action, 
+		altText: "mn350action.org",
+		caption: "WordPress site maintenance, theme development and content management"
+	},
+	{
+		src: github, 
+		altText: "github.com/johnmcneil",
+		caption: "open source projects on github.com"
+	},
+	{
+		src: qomb, 
+		altText: "Quodlibet of Messmore Breamworthy",
+		caption: "light-weight PHP content management with a Bootstrap front-end"
+	},
 ];
 
 const PortfolioCarousel = (props) => {
@@ -56,21 +82,21 @@ const PortfolioCarousel = (props) => {
 				onExited={() => setAnimating(false)}
 				key={item.src}
 			>
-				<img src={item.src} alt={item.altText} height="400px" />
+				<img src={item.src} alt={item.altText} />
 			</CarouselItem>		
 		);
 	});
 
 	return (
 		<Carousel
+			data-ride="carousel"
 			activeIndex={activeIndex}
 			next={next}
 			previous={previous}
 		>
 			<CarouselIndicators className="bg-dark" items={items} activeIndex={activeIndex} onClickHandler={goToIndex} />
 			{slides}
-			<CarouselControl className="text-dark" direction="prev" directionText="Previous" onClickHandler={previous} />
-			<CarouselControl className="text-dark" direction="next" directionText="Next" onClickHandler={next} />
+			
 		</Carousel>
 		);
 }

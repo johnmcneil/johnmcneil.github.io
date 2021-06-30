@@ -1,67 +1,19 @@
 import React from 'react';
 import PortfolioCarousel from '../components/PortfolioCarousel';
-import ReactWordcloud from 'react-wordcloud';
-
-const words = [
-	{
-		text: 'HTML',
-		value: '40',
-	},
-	{
-		text: 'CSS',
-		value: '40',
-	},
-	{
-		text: 'JavaScript',
-		value: '40',
-	},
-	{
-		text: 'WordPress',
-		value: '40',
-	},
-	{
-		text: 'jQuery',
-		value: '40',
-	},
-	{
-		text: 'd3.js',
-		value: '40',
-	},
-	{
-		text: 'Bootstrap',
-		value: '40',
-	},
-	{
-		text: 'PHP',
-		value: '40',
-	},
-	{
-		text: 'Python',
-		value: '40',
-	},
-	{
-		text: 'R',
-		value: '40',
-	},
-	{
-		text: 'MySQL',
-		value: '40',
-	},
-	{
-		text: 'Node.js',
-		value: '40',
-	},
-];
-
-const SimpleWordcloud = function SimpleWordcloud() {
-	return <ReactWordcloud words={words} />
-}
+import CodeCloud from '../components/CodeCloud';
 
 const HomePage = () => (
-	<>
-		<SimpleWordcloud />
-      	<PortfolioCarousel />
-	</>
+	<div className="container">
+		<div className="wordcloud-row row">
+			<CodeCloud className="offset-md-0" />
+		</div>
+		<div className="title-row row">
+			<h2>John McNeil - full-stack web development</h2>
+		</div>
+		<div className="carousel-row row">
+      		<PortfolioCarousel className="col-12" />
+      	</div>
+	</div>
 );
 
 export default HomePage;
