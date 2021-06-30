@@ -6,20 +6,23 @@ import {
 	CarouselIndicators,
 	CarouselCaption
 } from 'reactstrap';
+import chessgraphs from '../img/chessgraphs.png';
+import johnmcneilme from '../img/johnmcneilme.png';
+import kataymeloglu from '../img/kataymeloglu.png';
 
 const items = [
 	{
-		src: "https://www.chessgraphs.com", 
+		src: chessgraphs, 
 		altText: "ChessGraphs.com",
 		caption: "interactive visualization of chess ratings using d3.js"
 	},
 	{
-		src: "https://www.johnmcneil.me", 
+		src: johnmcneilme, 
 		altText: "johnmcneil.me",
 		caption: "personal website featuring a custom WordPress theme."
 	},
 	{
-		src: "https://www.kataymeloglu.com", 
+		src: kataymeloglu, 
 		altText: "kataymeloglu.com",
 		caption: "Artist portfolio website featuring a custom WordPress theme."
 	}
@@ -53,7 +56,7 @@ const PortfolioCarousel = (props) => {
 				onExited={() => setAnimating(false)}
 				key={item.src}
 			>
-				<iframe src={item.src} alt={item.altText} />
+				<img src={item.src} alt={item.altText} height="400px" />
 			</CarouselItem>		
 		);
 	});
