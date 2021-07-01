@@ -16,7 +16,6 @@ import qomb from '../img/qomb.png';
 import federalcourt from '../img/federalcourt-screenshot.png';
 
 
-
 const items = [
 	{
 		src: chessgraphs, 
@@ -60,6 +59,8 @@ const items = [
 	},
 ];
 
+const interval = "200";
+
 const PortfolioCarousel = (props) => {
 	const [activeIndex, setActiveIndex] = useState(0);
 	const [animating, setAnimating] = useState(false);
@@ -96,13 +97,13 @@ const PortfolioCarousel = (props) => {
 	return (
 		<Carousel
 			data-ride="carousel"
+			data-interval={interval}
+			interval={interval}
 			activeIndex={activeIndex}
 			next={next}
 			previous={previous}
 		>
-			<CarouselIndicators className="bg-dark" items={items} activeIndex={activeIndex} onClickHandler={goToIndex} />
-			{slides}
-			
+			{slides}			
 		</Carousel>
 		);
 }

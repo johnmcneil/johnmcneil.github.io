@@ -14,7 +14,7 @@ const HomePage = () => (
 			<h3>{subtitle}</h3>
 		</div>
 		<div className="carousel-row row">
-      		<PortfolioCarousel className="col-12" />
+      		<PortfolioCarousel />
       	</div>
 	</div>
 );
