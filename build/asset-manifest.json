@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.0a0b459d.chunk.css",
-    "main.js": "/static/js/main.74519533.chunk.js",
-    "main.js.map": "/static/js/main.74519533.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.d7a6dfe9.js",
-    "runtime-main.js.map": "/static/js/runtime-main.d7a6dfe9.js.map",
+    "main.css": "/static/css/main.81b57f52.chunk.css",
+    "main.js": "/static/js/main.958d82a1.chunk.js",
+    "main.js.map": "/static/js/main.958d82a1.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.7d142ed4.js",
+    "runtime-main.js.map": "/static/js/runtime-main.7d142ed4.js.map",
     "static/css/2.7b1c032f.chunk.css": "/static/css/2.7b1c032f.chunk.css",
-    "static/js/2.a9b65f69.chunk.js": "/static/js/2.a9b65f69.chunk.js",
-    "static/js/2.a9b65f69.chunk.js.map": "/static/js/2.a9b65f69.chunk.js.map",
-    "static/js/3.c050434a.chunk.js": "/static/js/3.c050434a.chunk.js",
-    "static/js/3.c050434a.chunk.js.map": "/static/js/3.c050434a.chunk.js.map",
+    "static/js/2.badb9a17.chunk.js": "/static/js/2.badb9a17.chunk.js",
+    "static/js/2.badb9a17.chunk.js.map": "/static/js/2.badb9a17.chunk.js.map",
+    "static/js/3.19f98785.chunk.js": "/static/js/3.19f98785.chunk.js",
+    "static/js/3.19f98785.chunk.js.map": "/static/js/3.19f98785.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.7b1c032f.chunk.css.map": "/static/css/2.7b1c032f.chunk.css.map",
-    "static/css/main.0a0b459d.chunk.css.map": "/static/css/main.0a0b459d.chunk.css.map",
-    "static/js/2.a9b65f69.chunk.js.LICENSE.txt": "/static/js/2.a9b65f69.chunk.js.LICENSE.txt",
+    "static/css/main.81b57f52.chunk.css.map": "/static/css/main.81b57f52.chunk.css.map",
+    "static/js/2.badb9a17.chunk.js.LICENSE.txt": "/static/js/2.badb9a17.chunk.js.LICENSE.txt",
     "static/media/chessgraphs.0b3a63a2.png": "/static/media/chessgraphs.0b3a63a2.png",
     "static/media/federalcourt-screenshot.675b7579.png": "/static/media/federalcourt-screenshot.675b7579.png",
     "static/media/github.637fb31a.png": "/static/media/github.637fb31a.png",
@@ -24,10 +24,10 @@
     "static/media/qomb.8ffbe7d0.png": "/static/media/qomb.8ffbe7d0.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.d7a6dfe9.js",
+    "static/js/runtime-main.7d142ed4.js",
     "static/css/2.7b1c032f.chunk.css",
-    "static/js/2.a9b65f69.chunk.js",
-    "static/css/main.0a0b459d.chunk.css",
-    "static/js/main.74519533.chunk.js"
+    "static/js/2.badb9a17.chunk.js",
+    "static/css/main.81b57f52.chunk.css",
+    "static/js/main.958d82a1.chunk.js"
   ]
 }

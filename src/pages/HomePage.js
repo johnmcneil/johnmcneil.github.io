@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import PortfolioCarousel from '../components/PortfolioCarousel';
+import React from 'react';
 import CodeCloud from '../components/CodeCloud';
 import chessgraphs from '../img/chessgraphs.png';
 import johnmcneilme from '../img/johnmcneilme.png';
@@ -23,12 +22,24 @@ const HomePage = () => (
 		</div>
 		<div id="portfolio" className="row">
 			<div className="img-container col-md-6 offset-md-3">
-				<img src={chessgraphs} />
-				<img src={johnmcneilme} />
-				<img src={github} />
-				<img src={kataymeloglu} />
-				<img src={mn350} />
-				<img src={mn350action} />
+				<div><a href="https://www.chessgraphs.com">
+					<img src={chessgraphs} />
+				</a></div>
+				<div><a href="https://www.johnmcneil.me/ajax-news/">
+					<img src={johnmcneilme} />
+				</a></div>
+				<div><a href="https://github.com/johnmcneil">
+					<img src={github} />
+				</a></div>
+				<div><a href="https://www.kataymeloglu.com">
+					<img src={kataymeloglu} />
+				</a></div>
+				<div><a href="https://mn350.org">
+					<img src={mn350} />
+				</a></div>
+				<div><a href="https://mn350action.org">
+					<img src={mn350action} />
+				</a></div>
 				<img src={federalcourt} />
 				<img src={qomb} />
 			</div>
