@@ -4,8 +4,10 @@ import {
 	CarouselItem,
 	CarouselControl,
 	CarouselIndicators,
-	CarouselCaption
+	CarouselCaption,
+	UncontrolledCarousel
 } from 'reactstrap';
+import $ from 'jquery';
 import chessgraphs from '../img/chessgraphs.png';
 import johnmcneilme from '../img/johnmcneilme.png';
 import kataymeloglu from '../img/kataymeloglu.png';
@@ -14,7 +16,6 @@ import mn350action from '../img/mn350action.png';
 import github from '../img/github.png';
 import qomb from '../img/qomb.png';
 import federalcourt from '../img/federalcourt-screenshot.png';
-
 
 const items = [
 	{
@@ -59,8 +60,6 @@ const items = [
 	},
 ];
 
-const interval = "200";
-
 const PortfolioCarousel = (props) => {
 	const [activeIndex, setActiveIndex] = useState(0);
 	const [animating, setAnimating] = useState(false);
@@ -96,16 +95,17 @@ const PortfolioCarousel = (props) => {
 
 	return (
 		<Carousel
+			id="portfolio-carousel"
 			data-ride="carousel"
-			data-interval={interval}
-			interval={interval}
 			activeIndex={activeIndex}
 			next={next}
 			previous={previous}
 		>
-			{slides}			
+			<CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex} />
+		     {slides}
 		</Carousel>
 		);
+
 }
 
 export default PortfolioCarousel;
