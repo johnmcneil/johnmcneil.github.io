@@ -1,0 +1,3 @@
+[submodule "spider-helmet"]
+	path = spider-helmet
+	url = https://github.com/johnmcneil/spider-helmet
