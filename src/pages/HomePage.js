@@ -42,18 +42,6 @@ const portfolioData = [
 	},
 ];
 
-const Portfolio = (portfolioData) => {
-	<div id="portfolio" className="row">
-		<div className="img-container col-md-6 offset-md-3">
-			{portfolioData.map((portfolioItem, i) => (
-				<a href={portfolioItem.href}>
-					<img src={portfolioItem.src} />
-				</a>
-			))}
-		</div>
-	</div>
-}
-
 const HomePage = () => (
 	<div className="container">
 		<div className="wordcloud-row row">
@@ -63,7 +51,6 @@ const HomePage = () => (
 			<h2>{title}</h2>
 			<h3>{subtitle}</h3>
 		</div>
-		<Portfolio />
 		<div id="portfolio" className="row">
 			<div className="img-container col-md-6 offset-md-3">
 				<div><a href="https://www.chessgraphs.com">
