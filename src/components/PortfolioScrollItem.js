@@ -41,7 +41,7 @@ const portfolioData = [
 
 console.log('portfolioData', portfolioData);
 
-const PortfolioScrollItem = () => {
+const PortfolioScrollItem = (props) => {
 	return (
 		<>
 		<a href={portfolioData[0].href}>
