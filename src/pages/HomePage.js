@@ -1,46 +1,11 @@
 import React from 'react';
 import CodeCloud from '../components/CodeCloud';
-import chessgraphs from '../img/chessgraphs.png';
-import johnmcneilme from '../img/johnmcneilme.png';
-import kataymeloglu from '../img/kataymeloglu.png';
-import mn350 from '../img/mn350.png';
-import mn350action from '../img/mn350action.png';
-import github from '../img/github.png';
-import qomb from '../img/qomb.png';
-import federalcourt from '../img/federalcourt-screenshot.png';
+import PortfolioScroll from '../components/PortfolioScroll';
+
 
 const title = "<John McNeil />";
 const subtitle = "{full-stack web development}";
-const portfolioData = [
-	{
-		src: chessgraphs,
-		href: "https://www.chessgraphs.com"
-	},
-	{
-		src: github,
-		href: "https://github.com/johnmcneil"
-	},
-	{
-		src: kataymeloglu, 
-		href: "https://www.kataymeloglu.com"
-	},
-	{
-		src: mn350,
-		href: "https://mn350.org"
-	},
-	{
-		src: mn350action,
-		href: "https://mn350action.org"
-	},
-	{
-		src: qomb,
-		href: ""
-	},
-	{
-		src: federalcourt,
-		href: ""
-	},
-];
+
 
 const HomePage = () => (
 	<div className="container">
@@ -51,6 +16,8 @@ const HomePage = () => (
 			<h2>{title}</h2>
 			<h3>{subtitle}</h3>
 		</div>
+		<PortfolioScroll />
+{/*	
 		<div id="portfolio" className="row">
 			<div className="img-container col-md-6 offset-md-3">
 				<div><a href="https://www.chessgraphs.com">
@@ -75,6 +42,7 @@ const HomePage = () => (
 				<img src={qomb} />
 			</div>
       	</div>
+*/}      	
 	</div>
 );
 
