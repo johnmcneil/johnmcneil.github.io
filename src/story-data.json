@@ -1,38 +1,38 @@
 [
 	{
 		"id": "1",
-		"title": "title1",
+		"title": "The Class Exemplar",
 		"summary": "summary1",
-		"link": "href"
+		"link": "https://365tomorrows.com/2021/08/05/the-class-exemplar/"
 	},
 	{
 		"id": "2",
-		"title": "title2",
+		"title": "Trial by Future",
 		"summary": "summary2",
-		"link": "href"
+		"link": "https://365tomorrows.com/2021/08/04/trial-by-future/"
 	},
 	{
 		"id": "3",
-		"title": "title3",
+		"title": "In My Defense",
 		"summary": "summary3",
-		"link": "href"
+		"link": "https://365tomorrows.com/2021/08/01/in-my-defense/"
 	},
 	{
 		"id": "4",
-		"title": "title4",
+		"title": "Rhodo's Defense",
 		"summary": "summary4",
-		"link": "href"
+		"link": "http://bmpvoices.com/ab-terra-flash-fiction_issue-1/"
 	},
 	{
 		"id": "5",
-		"title": "title5",
+		"title": "The Mushroom and the Cold",
 		"summary": "summary5",
-		"link": "href"
+		"link": "https://365tomorrows.com/2020/12/27/the-mushroom-and-the-cold/"
 	},
 	{
 		"id": "6",
-		"title": "title6",
+		"title": "The Bicyclist",
 		"summary": "summary6",
-		"link": "href"
+		"link": "https://365tomorrows.com/2020/12/17/the-bicyclist/"
 	}
 ]
