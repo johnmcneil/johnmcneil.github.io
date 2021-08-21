@@ -4,6 +4,7 @@ import {
   Switch, 
 } from 'react-router-dom';
 import HomePage from './pages/HomePage';
+import WritingPage from './pages/WritingPage';
 import NotFoundPage from './pages/NotFoundPage';
 
 
@@ -16,6 +17,7 @@ function App() {
       <div className="App">
         <Switch>
           <Route path="/" component={HomePage} exact />
+          <Route path="/writing" component={WritingPage} />
           <Route component={NotFoundPage} />
         </Switch>
       </div>
