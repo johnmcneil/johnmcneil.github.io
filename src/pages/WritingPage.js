@@ -9,10 +9,10 @@ const logComment = (comment) => {
 }
 
 const WritingPage = (props) => (
-	<div className="container">
+	<div className="container writing-page">
 		<div className="row">
 			<h1>Writing</h1>
-			<p>Some of my flash science fiction has been published online. You can follow a link and send me a comment if you want.</p>
+			<p>I write flash science fiction. Follow a link and send me a comment if you like.</p>
 			<StoryList stories={storyData} />
 			<FormSpreeForm />
 		</div>

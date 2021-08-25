@@ -43,3 +43,13 @@
 form div {
   margin:  10px 0;
 }
+
+.container {
+  margin:  25px 0;
+}
+
+.writing-page {
+  max-width:  750px;
+  width:  80%;
+  margin: 0 10%;
+}

@@ -9,6 +9,7 @@ import mn350action from '../img/mn350action.png';
 import github from '../img/github.png';
 import qomb from '../img/qomb.png';
 import federalcourt from '../img/federalcourt-screenshot.png';
+import WritingPage from './WritingPage';
 
 const title = "<John McNeil />";
 const subtitle = "{full-stack web development}";
@@ -36,16 +37,21 @@ const portfolioData = [
 		href: "https://mn350action.org"
 	},
 	{
-		src: qomb, 
-		href: ""
+		src: johnmcneilme,
+		href: "https://www.johnmcneil.me"
 	},
 	{
 		src: federalcourt, 
 		href: ""
 	},
+	{
+		src: qomb, 
+		href: ""
+	},
 ];
 
 const HomePage = (props) => (
+	<>
 	<div className="container">
 		<div className="wordcloud-row row">
 			<CodeCloud className="offset-md-0" />
@@ -56,6 +62,7 @@ const HomePage = (props) => (
 		</div>
 		<PortfolioScroll data={portfolioData}/>      	
 	</div>
+	</>
 );
 
 export default HomePage;

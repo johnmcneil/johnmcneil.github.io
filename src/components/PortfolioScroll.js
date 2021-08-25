@@ -13,6 +13,7 @@ const PortfolioScroll = (props) => {
 				<PortfolioScrollItem data={props.data[4]} />
 				<PortfolioScrollItem data={props.data[5]} />
 				<PortfolioScrollItem data={props.data[6]} />
+				<PortfolioScrollItem data={props.data[7]} />
 			</div>
 		</div>
 	);
