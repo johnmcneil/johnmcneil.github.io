@@ -13,6 +13,7 @@ function FormSpreeForm() {
           placeholder="Your comment..."
           id="message"
           name="message"
+          required
         />
         <ValidationError 
           prefix="Message" 
@@ -26,6 +27,7 @@ function FormSpreeForm() {
           type="email" 
           name="email"
           placeholder="Your email address..."
+          required
         />
         <ValidationError 
           prefix="Email" 
