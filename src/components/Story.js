@@ -8,8 +8,8 @@ export default function Story({
 	link
 }) {
 	return (
-		<section>
-			<h1><a href={link}>{title}</a></h1>
+		<section className="story-section">
+			<p><a href={link}>{title}</a></p>
 			<p>{summary}</p>
 		</section>
 	);

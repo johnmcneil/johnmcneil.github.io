@@ -11,13 +11,14 @@ export default function CommentForm({ onComment = f => f }) {
 	}
 
 	return (
-		<form onSubmit={submit}>
+		<form className="comment-form" onSubmit={submit}>
 			<input
 				type="text"
-				placeholder="story feedback..."
+				placeholder="Your Comment..."
+				rows= "4"
 				required
 			/>
-			<button>Send Comment</button>
+			<button>Send</button>
 		</form>
 	);
 }

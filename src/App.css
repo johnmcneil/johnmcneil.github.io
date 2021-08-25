@@ -28,3 +28,18 @@
   margin:  30px 0;
 }
 
+.story-section {
+  margin: 20px 0;
+}
+
+.story-section p, .story-section a {
+  margin: 0 auto;
+}
+
+.comment-form {
+  margin:  20px 0;
+}
+
+form div {
+  margin:  10px 0;
+}

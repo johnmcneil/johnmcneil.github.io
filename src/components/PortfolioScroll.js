@@ -2,6 +2,7 @@ import React from 'react';
 import PortfolioScrollItem from './PortfolioScrollItem';
 
 const PortfolioScroll = (props) => {
+	console.log(props);
 	return(
 		<div id="portfolioScroll" className="row">
 			<div className="img-container col-md-6 offset-md-3">
