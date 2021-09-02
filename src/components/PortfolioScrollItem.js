@@ -1,14 +1,16 @@
 import React from 'react';
 
 
-const PortfolioScrollItem = (props) => {
+export default function Story({
+	id,
+	src,
+	href
+}) {
 	return (
 		<>
-		<a href={props.data.href}>
-			<img src={props.data.src} />
-		</a>
+			<a href={href}>
+				<img src={src} />
+			</a>
 		</>
 	);
 }
-
-export default PortfolioScrollItem;

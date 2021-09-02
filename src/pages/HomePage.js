@@ -17,34 +17,42 @@ const subtitle = "{full-stack web development}";
 
 const portfolioData = [
 	{
+		id: "1",
 		src: chessgraphs, 
 		href: "https://www.chessgraphs.com"
 	},
 	{
+		id: "2",
 		src: github, 
 		href: "https://github.com/johnmcneil"
 	},
 	{
+		id: "3",
 		src: kataymeloglu, 
 		href: "https://www.kataymeloglu.com"
 	},
 	{
+		id: "4",
 		src: mn350, 
 		href: "https://mn350.org"
 	},
 	{
+		id: "5",
 		src: mn350action, 
 		href: "https://mn350action.org"
 	},
 	{
+		id: "6",
 		src: johnmcneilme,
 		href: "https://www.johnmcneil.me"
 	},
 	{
+		id: "7",
 		src: federalcourt, 
 		href: ""
 	},
 	{
+		id: "8",
 		src: qomb, 
 		href: ""
 	},
@@ -60,7 +68,7 @@ const HomePage = (props) => (
 			<h2>{title}</h2>
 			<h3>{subtitle}</h3>
 		</div>
-		<PortfolioScroll data={portfolioData}/>      	
+		<PortfolioScroll sites={portfolioData}/>      	
 	</div>
 	</>
 );

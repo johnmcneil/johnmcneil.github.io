@@ -4,6 +4,7 @@ import Story from './Story';
 export default function StoryList({
 	stories = []
 }) {
+	console.log("StoryList function stories", stories);
 	return (
 		<div className="story-list">
 			{
