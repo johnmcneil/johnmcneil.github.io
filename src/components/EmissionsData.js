@@ -1,9 +1,10 @@
-import react, { useState, useEffect } from 'react';
+import react from 'react';
 import useFetch from '../hooks/useFetch';
 
-function Emissions({ country }) {
+function Emissions({ country, gas, begin, end }) {
+    console.log("gas", gas);
     const { loading, data, error } = useFetch(
-        `https://api.v2.emissions-api.org/api/v2/methane/average.json?country=${country}&begin=2019-01-01&end=2020-12-31`
+        `https://api.v2.emissions-api.org/api/v2/${gas}/average.json?country=${country}&begin=${begin}&end=${end}`
     );
 
     if (loading) return <h1>loading...</h1>;
@@ -17,6 +18,6 @@ function Emissions({ country }) {
     )
 }
 
-export default function EmissionsData({ country }) {
-    return <Emissions country={country} />
+export default function EmissionsData({ country, gas, begin, end }) {
+    return <Emissions country={country} gas={gas} begin={begin} end={end} />
 }
