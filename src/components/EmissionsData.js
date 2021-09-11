@@ -2,6 +2,7 @@ import react from 'react';
 import useFetch from '../hooks/useFetch';
 
 function Emissions({ country, gas, begin, end }) {
+    console.log("country", country, "gas", gas, "begin", begin, "end", end);
     const { loading, data, error } = useFetch(
         `https://api.v2.emissions-api.org/api/v2/${gas}/average.json?country=${country}&begin=${begin}&end=${end}`
     );

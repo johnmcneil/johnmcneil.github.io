@@ -9,40 +9,45 @@ export default function SearchForm({ onSearch = f => f }) {
 
 	const submit = e => { 
 		e.preventDefault();
+		console.log("countryProps", countryProps);
+		console.log("gasProps", gasProps);
+		console.log("beginProps", beginProps);
+		console.log("endProps", endProps);
 		onSearch(countryProps.value, gasProps.value, beginProps.value, endProps.value);
-		resetCountry();
-		resetGas();
-		resetBegin();
-		resetEnd();
+		
 	};
 
 	return (
 		<form onSubmit={submit}>
 			<input
 				{...countryProps}
+				name="country"
 				type="text"
 				placeholder="country"
 				required
 			/>
 			<input
 				{...gasProps}
+				name="gas"
 				type="text"
 				placeholder="gas"
 				required
 			/>
 			<input 
 				{...beginProps}
+				name="begin"
 				type="date"
 				placeholder="begin"
 				required
 			/>
 			<input
 				{...endProps}
+				name="end"
 				type="date"
 				placeholder="end"
 				required
 			/>
-			<button>Submit</button>
+			<input type="submit" value="Submit" />
 		</form>
 	);
 }
