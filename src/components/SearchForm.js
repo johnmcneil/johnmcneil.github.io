@@ -9,10 +9,12 @@ export default function SearchForm({ onSearch = f => f }) {
 
 	const submit = e => { 
 		e.preventDefault();
+
 		console.log("countryProps", countryProps);
 		console.log("gasProps", gasProps);
 		console.log("beginProps", beginProps);
 		console.log("endProps", endProps);
+		
 		onSearch(countryProps.value, gasProps.value, beginProps.value, endProps.value);
 		
 	};

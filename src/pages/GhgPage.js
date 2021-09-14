@@ -21,8 +21,8 @@ export default function GhgPage() {
 		<>
 			<h1>GhgPage</h1>
 			<SearchForm onSearch={search}/>
+
 			<EmissionsData country={country} gas={gas} begin={begin} end={end} />
-			<LineChart />
 		</>
 	);
 }
