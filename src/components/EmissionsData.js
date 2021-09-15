@@ -12,6 +12,7 @@ function Emissions({ country, gas, begin, end }) {
     if (error)
         return <pre>{JSON.stringify(error, null, 2)}</pre>;
 
+    data.sort( (a, b) => { return new Date(a.start) - new Date(b.start) } );
     return(
         <>
             <LineChart width={600} height={400} data={data} />

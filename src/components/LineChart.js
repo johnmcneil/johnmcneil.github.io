@@ -1,5 +1,6 @@
 import React from 'react';
-import { Line, LineChart, CartesianGrid, XAxis, YAxis } from 'recharts';
+import { Line, LineChart, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';
+import moment from 'moment';
 
 
 const Chart = ({ data }) => {
@@ -11,8 +12,9 @@ const Chart = ({ data }) => {
 				stroke="#8884d8"
 			/>
 			<CartesianGrid stroke="#ccc" />
-			<XAxis dataKey="name" />
+			<XAxis dataKey="start" tickFormatter={timeStr => moment(timeStr).format('YY-MM')} />
 			<YAxis />
+			<Tooltip />
 		</LineChart>
 	);
 };
