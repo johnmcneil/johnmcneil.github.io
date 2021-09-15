@@ -28,13 +28,16 @@ export default function SearchForm({ onSearch = f => f }) {
 				placeholder="country"
 				required
 			/>
-			<input
+			<select
 				{...gasProps}
 				name="gas"
-				type="text"
 				placeholder="gas"
-				required
-			/>
+				required>
+				<option value="methane">Methane</option>
+				<option value="ozone">Ozone</option>
+				<option value="carbonmonoxide">Carbon Monoxide</option>
+				<option value="nitrogendioxide">Nitrogen Dioxide</option>
+			</select>
 			<input 
 				{...beginProps}
 				name="begin"
