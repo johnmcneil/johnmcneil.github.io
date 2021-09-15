@@ -13,7 +13,7 @@ const Chart = ({ data }) => {
 			/>
 			<CartesianGrid stroke="#ccc" />
 			<XAxis dataKey="start" tickFormatter={timeStr => moment(timeStr).format('YY-MM')} />
-			<YAxis />
+			<YAxis type="number" domain={['auto', 'auto']}/>
 			<Tooltip />
 		</LineChart>
 	);
