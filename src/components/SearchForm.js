@@ -1,5 +1,8 @@
 import react from 'react';
 import useInput from '../hooks/useInput';
+import countryCodes from '../country-codes.json';
+import SelectCountry from './SelectCountry';
+
 
 export default function SearchForm({ onSearch = f => f }) {
 	const [countryProps, resetCountry] = useInput("us");
@@ -21,13 +24,8 @@ export default function SearchForm({ onSearch = f => f }) {
 
 	return (
 		<form onSubmit={submit}>
-			<input
-				{...countryProps}
-				name="country"
-				type="text"
-				placeholder="country"
-				required
-			/>
+			<SelectCountry countryCodes={countryCodes} countryProps={countryProps}/>
+		
 			<select
 				{...gasProps}
 				name="gas"
