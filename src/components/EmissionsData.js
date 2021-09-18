@@ -16,7 +16,6 @@ function Emissions({ country, gas, begin, end }) {
     return(
         <>
             <LineChart width={600} height={400} data={data} />
-            <pre>{JSON.stringify(data, null, 2)}</pre>
         </>
     )
 }

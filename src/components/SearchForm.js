@@ -18,18 +18,18 @@ export default function SearchForm({ onSearch = f => f }) {
 		console.log("beginProps", beginProps);
 		console.log("endProps", endProps);
 		
-		onSearch(countryProps.value, gasProps.value, beginProps.value, endProps.value);
-		
+		onSearch(countryProps.value, gasProps.value, beginProps.value, endProps.value);		
 	};
 
 	return (
 		<form onSubmit={submit}>
-			<SelectCountry countryCodes={countryCodes} countryProps={countryProps}/>
+			<SelectCountry countryCodes={countryCodes} countryProps={countryProps} />
 		
 			<select
 				{...gasProps}
 				name="gas"
 				placeholder="gas"
+				value={gasProps.value}
 				required>
 				<option value="methane">Methane</option>
 				<option value="ozone">Ozone</option>

@@ -1,10 +1,12 @@
 import React from 'react';
 import CountryOption from './CountryOption';
 
+
 export default function SelectCountry({
 	countryCodes = [],
 	countryProps = {}
 }) {
+	console.log("countryProps", countryProps);
 	return (
 		<select
 			{...countryProps}

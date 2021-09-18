@@ -5,6 +5,7 @@ export default function CountryOption({
 	code
 }) {
 	return (
-		<option value={code}>{name}</option>
+		<option value={code}>{name}
+		</option>
 	);
 }
