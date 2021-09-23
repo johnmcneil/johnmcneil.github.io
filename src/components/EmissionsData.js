@@ -13,9 +13,17 @@ function Emissions({ country, gas, begin, end }) {
         return <pre>{JSON.stringify(error, null, 2)}</pre>;
 
     data.sort( (a, b) => { return new Date(a.start) - new Date(b.start) } );
+
+    let unit = "unit";
+    if ( gas == "methane" ) { console.log("gass == 'methane' true"); unit = "methane unit"; }
+    if ( gas == "ozone" ) { unit = "ozone unit"; }
+    if ( gas == "nitrogendioxide" ) { unit = "nitrogendioxide unit"; }
+    if ( gas == "carbonmonoxide" ) { unit = "mol/m2"; }
+
     return(
         <>
-            <LineChart width={600} height={400} data={data} />
+            <h3>{country} {gas} emissions, {begin} to {end}</h3>
+            <LineChart data={data} gas={gas} unit={unit} />
         </>
     )
 }

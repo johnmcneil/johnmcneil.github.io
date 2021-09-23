@@ -23,33 +23,44 @@ export default function SearchForm({ onSearch = f => f }) {
 
 	return (
 		<form onSubmit={submit}>
-			<SelectCountry countryCodes={countryCodes} countryProps={countryProps} />
-		
-			<select
-				{...gasProps}
-				name="gas"
-				placeholder="gas"
-				value={gasProps.value}
-				required>
-				<option value="methane">Methane</option>
-				<option value="ozone">Ozone</option>
-				<option value="carbonmonoxide">Carbon Monoxide</option>
-				<option value="nitrogendioxide">Nitrogen Dioxide</option>
-			</select>
-			<input 
-				{...beginProps}
-				name="begin"
-				type="date"
-				placeholder="begin"
-				required
-			/>
-			<input
-				{...endProps}
-				name="end"
-				type="date"
-				placeholder="end"
-				required
-			/>
+			<label>Country:
+				<SelectCountry countryCodes={countryCodes} countryProps={countryProps} />
+			</label>
+			<br />
+			<label>Gas:
+				<select
+					{...gasProps}
+					name="gas"
+					placeholder="gas"
+					value={gasProps.value}
+					required>
+					<option value="methane">Methane</option>
+					<option value="ozone">Ozone</option>
+					<option value="carbonmonoxide">Carbon Monoxide</option>
+					<option value="nitrogendioxide">Nitrogen Dioxide</option>
+				</select>
+			</label>
+			<br />
+			<label for="begin">Start date:
+				<input 
+					{...beginProps}
+					name="begin"
+					type="date"
+					min="2018-12-31"
+					required
+				/>
+			</label>
+			<br />
+			<label for="end">End date:
+				<input
+					{...endProps}
+					name="end"
+					type="date"
+					min="2018-12-31"
+					required
+				/>
+			</label>
+			<br />
 			<input type="submit" value="Submit" />
 		</form>
 	);

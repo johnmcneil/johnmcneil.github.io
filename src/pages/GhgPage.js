@@ -19,7 +19,8 @@ export default function GhgPage() {
 
 	return ( 
 		<>
-			<h1>GhgPage</h1>
+			<h1>Visualizing Greenhouse Gas Emissions</h1>
+			<h2>Sentinel-5P satellite data</h2>
 			<SearchForm onSearch={search}/>
 
 			<EmissionsData country={country} gas={gas} begin={begin} end={end} />
