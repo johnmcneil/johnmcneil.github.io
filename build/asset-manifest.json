@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.892c1f02.chunk.css",
-    "main.js": "/static/js/main.a489af01.chunk.js",
-    "main.js.map": "/static/js/main.a489af01.chunk.js.map",
+    "main.css": "/static/css/main.449024a1.chunk.css",
+    "main.js": "/static/js/main.7877f4ab.chunk.js",
+    "main.js.map": "/static/js/main.7877f4ab.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.eba101d0.js",
     "runtime-main.js.map": "/static/js/runtime-main.eba101d0.js.map",
     "static/css/2.7b1c032f.chunk.css": "/static/css/2.7b1c032f.chunk.css",
@@ -12,7 +12,7 @@
     "static/js/3.d572cda7.chunk.js.map": "/static/js/3.d572cda7.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.7b1c032f.chunk.css.map": "/static/css/2.7b1c032f.chunk.css.map",
-    "static/css/main.892c1f02.chunk.css.map": "/static/css/main.892c1f02.chunk.css.map",
+    "static/css/main.449024a1.chunk.css.map": "/static/css/main.449024a1.chunk.css.map",
     "static/js/2.0d4977f3.chunk.js.LICENSE.txt": "/static/js/2.0d4977f3.chunk.js.LICENSE.txt",
     "static/media/chessgraphs.0b3a63a2.png": "/static/media/chessgraphs.0b3a63a2.png",
     "static/media/federalcourt-screenshot.675b7579.png": "/static/media/federalcourt-screenshot.675b7579.png",
@@ -27,7 +27,7 @@
     "static/js/runtime-main.eba101d0.js",
     "static/css/2.7b1c032f.chunk.css",
     "static/js/2.0d4977f3.chunk.js",
-    "static/css/main.892c1f02.chunk.css",
-    "static/js/main.a489af01.chunk.js"
+    "static/css/main.449024a1.chunk.css",
+    "static/js/main.7877f4ab.chunk.js"
   ]
 }

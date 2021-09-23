@@ -26,7 +26,6 @@ export default function SearchForm({ onSearch = f => f }) {
 			<label>Country:
 				<SelectCountry countryCodes={countryCodes} countryProps={countryProps} />
 			</label>
-			<br />
 			<label>Gas:
 				<select
 					{...gasProps}
@@ -50,7 +49,6 @@ export default function SearchForm({ onSearch = f => f }) {
 					required
 				/>
 			</label>
-			<br />
 			<label for="end">End date:
 				<input
 					{...endProps}
@@ -60,7 +58,7 @@ export default function SearchForm({ onSearch = f => f }) {
 					required
 				/>
 			</label>
-			<br />
+
 			<input type="submit" value="Submit" />
 		</form>
 	);

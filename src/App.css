@@ -54,3 +54,40 @@ form div {
   margin: 0 10%;
 }
 
+.ghg-page {
+  margin:  0 5%;
+}
+
+.ghg-page h1 {
+  margin: 0 0 15px 0;
+}
+
+.ghg-page h2 {
+  margin: 0 0 5px 0;
+}
+
+.ghg-page form {
+  margin:  0;
+}
+
+.ghg-page p {
+  margin-bottom:  5px;
+}
+
+.ghg-page .chart-title {
+  font-weight: bold;
+  margin: 10px 0 5px 30px;
+}
+
+.ghg-page form label{
+  margin: 0 5px 5px 0;
+}
+
+.ghg-page form select {
+  width: 150px;
+  margin: 0 0 0 5px;
+}
+
+.ghg-page form input {
+  margin: 0 0 0 5px;
+}

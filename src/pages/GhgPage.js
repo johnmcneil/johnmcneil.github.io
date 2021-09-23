@@ -18,12 +18,12 @@ export default function GhgPage() {
 	}
 
 	return ( 
-		<>
-			<h1>Visualizing Greenhouse Gas Emissions</h1>
-			<h2>Sentinel-5P satellite data</h2>
+		<div className="ghg-page">
+			<h3>Visualizing Greenhouse Gas Emissions</h3>
+			<p><strong>Query <a href="https://emissions-api.org/">Sentinel-5P satellite data</a>:</strong></p>
 			<SearchForm onSearch={search}/>
 
 			<EmissionsData country={country} gas={gas} begin={begin} end={end} />
-		</>
+		</div>
 	);
 }

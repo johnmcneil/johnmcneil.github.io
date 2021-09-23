@@ -1,6 +1,7 @@
 import react from 'react';
 import useFetch from '../hooks/useFetch';
 import LineChart from './LineChart.js';
+import countryCodes from '../country-codes.json';
 
 function Emissions({ country, gas, begin, end }) {
     console.log("country", country, "gas", gas, "begin", begin, "end", end);
@@ -8,21 +9,33 @@ function Emissions({ country, gas, begin, end }) {
         `https://api.v2.emissions-api.org/api/v2/${gas}/average.json?country=${country}&begin=${begin}&end=${end}`
     );
 
-    if (loading) return <h1>loading...</h1>;
+    if (loading) return <h4>loading...</h4>;
     if (error)
         return <pre>{JSON.stringify(error, null, 2)}</pre>;
 
     data.sort( (a, b) => { return new Date(a.start) - new Date(b.start) } );
 
     let unit = "unit";
-    if ( gas == "methane" ) { console.log("gass == 'methane' true"); unit = "methane unit"; }
+    if ( gas == "methane" ) { unit = "methane unit"; }
     if ( gas == "ozone" ) { unit = "ozone unit"; }
     if ( gas == "nitrogendioxide" ) { unit = "nitrogendioxide unit"; }
     if ( gas == "carbonmonoxide" ) { unit = "mol/m2"; }
 
+    const gasCapitalized = gas.charAt(0).toUpperCase() + gas.slice(1);
+    
+    let countryName = "countryName";
+    const countryCapitalized = country.toUpperCase();
+    
+    function getCountryName(item) {
+        if ( item.code == countryCapitalized ) { 
+            countryName = item.name; 
+        }
+    }
+    countryCodes.map( getCountryName );
+
     return(
         <>
-            <h3>{country} {gas} emissions, {begin} to {end}</h3>
+            <p className="chart-title">{countryName} {gasCapitalized} Emissions ({begin} to {end})</p>
             <LineChart data={data} gas={gas} unit={unit} />
         </>
     )
