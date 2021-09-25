@@ -1,6 +1,6 @@
 import react from 'react';
 import useFetch from '../hooks/useFetch';
-import LineChart from './LineChart.js';
+import LineChart from './LineChart';
 import countryCodes from '../country-codes.json';
 
 function Emissions({ country, gas, begin, end }) {
@@ -41,6 +41,6 @@ function Emissions({ country, gas, begin, end }) {
     )
 }
 
-export default function EmissionsData({ country, gas, begin, end }) {
+export default function SentinelSP5Chart({ country, gas, begin, end }) {
     return <Emissions country={country} gas={gas} begin={begin} end={end} />
 }
