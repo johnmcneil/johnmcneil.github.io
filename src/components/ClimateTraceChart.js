@@ -1,25 +1,52 @@
 import react from 'react';
 import useFetch from '../hooks/useFetch';
-import LineChart from './LineChart';
+import { Line, LineChart, CartesianGrid, XAxis, YAxis, Tooltip, Label } from 'recharts';
+import moment from 'moment';
 import countryCodes from '../country-codes.json';
 
-function ClimateTrace({ country, interval, sector, begin, end }) {
+export default function ClimateTraceChart({ country }) {
+	console.log("country", country);
+
 	const { loading, data, error } = useFetch(
-		`https://api.climatetrace.org/emissions_by_country?interval=year&sectors=${sector}&since=${begin}&to=${end}`
+		`https://api.climatetrace.org/emissions_by_country`
 	);
 
 	if (loading) return <h4>loading...</h4>;
 	if (error)
 		return <pre>{JSON.stringify(error, null, 2)}</pre>;
 
+	console.log("data", data);
+	console.log("country", country);
+
+	let countryData = [];
+	function getCountryMatch( item ) {
+		if ( item.country == country ) {
+			countryData = item;
+		}
+	}
+
+	data.map( getCountryMatch );
+
+	console.log("countryData", countryData);
+
+
 	return(
 		<>
-			<p className="chart-title">{country} {interval} {sector} {begin} {end} </p>
-			<LineChart data={data} />
+			<p className="chart-title">{country} Emissions</p>
+			<LineChart width={600} height={400} data={countryData} margin={{ top:0, right: 30, left: 30, bottom: 30}}>
+				<Line
+					dataKey="emissions"
+					type="monotone"
+					stroke="#8884d8"
+				/>
+				<CartesianGrid stroke="#ccc" />
+				<XAxis dataKey="start" tickFormatter={timeStr => moment(timeStr).format('YY-MM')} >
+					<Label value="Year" position="bottom" />
+				</XAxis>
+				<YAxis type="number" domain={['auto', 'auto']} label={{ value: "y axis", angle: -90, position: "insideLeft" }} />
+				<Tooltip />
+			</LineChart>
 		</>
 	)
 }
 
-export default function ClimateTraceChart({ country, interval, sector, begin, end }) {
-	return <ClimateTrace country={country} interval={interval} sector={sector} begin={begin} end={end} />
-}

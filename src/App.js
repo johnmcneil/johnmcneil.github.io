@@ -5,7 +5,8 @@ import {
 } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import WritingPage from './pages/WritingPage';
-import GhgPage from './pages/GhgPage';
+import SentinelSP5Page from './pages/SentinelSP5Page';
+import ClimateTracePage from './pages/ClimateTracePage';
 import NotFoundPage from './pages/NotFoundPage';
 
 
@@ -19,7 +20,8 @@ function App() {
         <Switch>
           <Route path="/" component={HomePage} exact />
           <Route path="/writing" component={WritingPage} />
-          <Route path="/ghg" component={GhgPage} />
+          <Route path="/sentinelsp5" component={SentinelSP5Page} />
+          <Route path="/climatetrace" component={ClimateTracePage} />
           <Route component={NotFoundPage} />
         </Switch>
       </div>

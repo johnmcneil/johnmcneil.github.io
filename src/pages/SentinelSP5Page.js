@@ -1,8 +1,9 @@
 import react, { useState } from 'react';
 import LineChart from '../components/LineChart';
 import SentinelSP5Chart from '../components/SentinelSP5Chart';
-import SearchForm from '../components/SearchForm';
+import SentinelSP5SearchForm from '../components/SentinelSP5SearchForm';
 import ClimateTraceChart from '../components/ClimateTraceChart';
+import ClimateTraceSearchForm from '../components/ClimateTraceSearchForm';
 
 export default function GhgPage() {
 	const [country, setCountry] = useState("us");
@@ -20,14 +21,12 @@ export default function GhgPage() {
 
 	return ( 
 		<div className="ghg-page">
-			<h3>Visualizing Greenhouse Gas Emissions</h3>
+			<h3>Charting Greenhouse Gas Emissions</h3>
+
 			<p><strong>Query <a href="https://emissions-api.org/">Sentinel-5P satellite data</a>:</strong></p>
-			<SearchForm onSearch={search}/>
+			<SentinelSP5SearchForm onSearch={search}/>
 			<SentinelSP5Chart country={country} gas={gas} begin={begin} end={end} />
 
-			<p><strong>Query <a href="https://www.climatetrace.org">Climate Trace</a>:</strong></p>
-			<SearchForm onSearch={search}/>
-			<ClimateTraceChart />
 		</div>
 	);
 }

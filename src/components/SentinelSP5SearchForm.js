@@ -4,7 +4,7 @@ import countryCodes from '../country-codes.json';
 import SelectCountry from './SelectCountry';
 
 
-export default function SearchForm({ onSearch = f => f }) {
+export default function SentinelSP5SearchForm({ onSearch = f => f }) {
 	const [countryProps, resetCountry] = useInput("us");
 	const [gasProps, resetGas] = useInput("methane");
 	const [beginProps, resetBegin] = useInput("2020-01-01");
