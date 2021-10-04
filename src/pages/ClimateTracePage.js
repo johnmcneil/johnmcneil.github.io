@@ -1,12 +1,11 @@
 import react, { useState } from 'react';
 import LineChart from '../components/LineChart';
-import SentinelSP5Chart from '../components/SentinelSP5Chart';
-import SentinelSP5SearchForm from '../components/SentinelSP5SearchForm';
+
 import ClimateTraceChart from '../components/ClimateTraceChart';
 import ClimateTraceSearchForm from '../components/ClimateTraceSearchForm';
 
 export default function ClimateTracePage() {
-	const [country, setCountry] = useState("us");
+	const [country, setCountry] = useState("USA");
 
 	const search = (country) => {
 		console.log("search function", country);
