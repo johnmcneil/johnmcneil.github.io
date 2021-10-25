@@ -1,6 +1,8 @@
 import React from 'react';
 import CodeCloud from '../components/CodeCloud';
 import PortfolioScroll from '../components/PortfolioScroll';
+import sentinelsp5 from '../img/sentinelsp5.png';
+import climatetrace from '../img/climatetrace.png';
 import chessgraphs from '../img/chessgraphs.png';
 import johnmcneilme from '../img/johnmcneilme.png';
 import kataymeloglu from '../img/kataymeloglu.png';
@@ -22,37 +24,42 @@ const portfolioData = [
 		href: "https://www.chessgraphs.com"
 	},
 	{
-		id: "2",
+		id: "3",
+		src: sentinelsp5, 
+		href: "https://johnmcneil.github.io/#/sentinelsp5"
+	},
+	{
+		id: "4",
 		src: github, 
 		href: "https://github.com/johnmcneil"
 	},
 	{
-		id: "3",
+		id: "5",
 		src: kataymeloglu, 
 		href: "https://www.kataymeloglu.com"
 	},
 	{
-		id: "4",
+		id: "6",
 		src: mn350, 
 		href: "https://mn350.org"
 	},
 	{
-		id: "5",
+		id: "7",
 		src: mn350action, 
 		href: "https://mn350action.org"
 	},
 	{
-		id: "6",
+		id: "8",
 		src: johnmcneilme,
 		href: "https://www.johnmcneil.me"
 	},
 	{
-		id: "7",
+		id: "9",
 		src: federalcourt, 
 		href: ""
 	},
 	{
-		id: "8",
+		id: "10",
 		src: qomb, 
 		href: ""
 	},
