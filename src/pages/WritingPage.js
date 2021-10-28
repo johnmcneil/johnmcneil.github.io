@@ -3,11 +3,6 @@ import storyData from '../story-data.json';
 import StoryList from '../components/StoryList';
 import FormSpreeForm from '../components/FormSpreeForm';
 
-const logComment = (comment) => {
-	console.log("logComment fired");
-	console.log(comment);
-}
-
 const WritingPage = (props) => (
 	<div className="container writing-page">
 		<div className="row">

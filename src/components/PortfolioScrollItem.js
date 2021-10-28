@@ -9,7 +9,7 @@ export default function Story({
 	return (
 		<>
 			<a href={href}>
-				<img src={src} />
+				<img alt="website portfolio entry" src={src} />
 			</a>
 		</>
 	);

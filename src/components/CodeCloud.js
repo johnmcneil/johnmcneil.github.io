@@ -77,8 +77,6 @@ const words = [
 ];
 
 
-const size = [400, 20];
-
 const options = {
 	rotations: 1,
 	rotationAngles: [0],

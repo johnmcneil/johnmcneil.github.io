@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.76476803.chunk.css",
-    "main.js": "/static/js/main.ad963ce6.chunk.js",
-    "main.js.map": "/static/js/main.ad963ce6.chunk.js.map",
+    "main.js": "/static/js/main.adcc2f74.chunk.js",
+    "main.js.map": "/static/js/main.adcc2f74.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.bcd3d08f.js",
     "runtime-main.js.map": "/static/js/runtime-main.bcd3d08f.js.map",
     "static/css/2.7b1c032f.chunk.css": "/static/css/2.7b1c032f.chunk.css",
@@ -15,19 +15,21 @@
     "static/css/main.76476803.chunk.css.map": "/static/css/main.76476803.chunk.css.map",
     "static/js/2.4f61bbe8.chunk.js.LICENSE.txt": "/static/js/2.4f61bbe8.chunk.js.LICENSE.txt",
     "static/media/chessgraphs.0b3a63a2.png": "/static/media/chessgraphs.0b3a63a2.png",
+    "static/media/climatetrace.b5712fdd.png": "/static/media/climatetrace.b5712fdd.png",
     "static/media/federalcourt-screenshot.675b7579.png": "/static/media/federalcourt-screenshot.675b7579.png",
     "static/media/github.637fb31a.png": "/static/media/github.637fb31a.png",
     "static/media/johnmcneilme.8606cabe.png": "/static/media/johnmcneilme.8606cabe.png",
     "static/media/kataymeloglu.8aa0e5e3.png": "/static/media/kataymeloglu.8aa0e5e3.png",
     "static/media/mn350.0c644b12.png": "/static/media/mn350.0c644b12.png",
     "static/media/mn350action.b8d1015c.png": "/static/media/mn350action.b8d1015c.png",
-    "static/media/qomb.8ffbe7d0.png": "/static/media/qomb.8ffbe7d0.png"
+    "static/media/qomb.8ffbe7d0.png": "/static/media/qomb.8ffbe7d0.png",
+    "static/media/sentinelsp5.e0e60fb0.png": "/static/media/sentinelsp5.e0e60fb0.png"
   },
   "entrypoints": [
     "static/js/runtime-main.bcd3d08f.js",
     "static/css/2.7b1c032f.chunk.css",
     "static/js/2.4f61bbe8.chunk.js",
     "static/css/main.76476803.chunk.css",
-    "static/js/main.ad963ce6.chunk.js"
+    "static/js/main.adcc2f74.chunk.js"
   ]
 }

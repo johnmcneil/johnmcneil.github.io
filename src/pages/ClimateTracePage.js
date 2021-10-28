@@ -1,5 +1,4 @@
-import react, { useState } from 'react';
-import LineChart from '../components/LineChart';
+import { useState } from 'react';
 
 import ClimateTraceChart from '../components/ClimateTraceChart';
 import ClimateTraceSearchForm from '../components/ClimateTraceSearchForm';

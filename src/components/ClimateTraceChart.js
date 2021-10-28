@@ -1,8 +1,6 @@
-import react from 'react';
 import useFetch from '../hooks/useFetch';
 import { Line, LineChart, CartesianGrid, XAxis, YAxis, Tooltip, Label } from 'recharts';
 import moment from 'moment';
-import countryCodes from '../country-codes.json';
 
 export default function ClimateTraceChart({ country }) {
 	console.log("country", country);
@@ -20,7 +18,7 @@ export default function ClimateTraceChart({ country }) {
 
 	let countryData = [];
 	function getCountryMatch( item ) {
-		if ( item.country == country ) {
+		if ( item.country === country ) {
 			countryData = [ item.emissions[5], 
 							item.emissions[4], 
 							item.emissions[3], 

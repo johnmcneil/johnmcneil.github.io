@@ -1,9 +1,6 @@
-import react, { useState } from 'react';
-import LineChart from '../components/LineChart';
+import { useState } from 'react';
 import SentinelSP5Chart from '../components/SentinelSP5Chart';
 import SentinelSP5SearchForm from '../components/SentinelSP5SearchForm';
-import ClimateTraceChart from '../components/ClimateTraceChart';
-import ClimateTraceSearchForm from '../components/ClimateTraceSearchForm';
 
 export default function GhgPage() {
 	const [country, setCountry] = useState("us");
