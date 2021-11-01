@@ -15,9 +15,9 @@ function Emissions({ country, gas, begin, end }) {
     data.sort( (a, b) => { return new Date(a.start) - new Date(b.start) } );
 
     let unit = "unit";
-    if ( gas === "methane" ) { unit = "methane unit"; }
-    if ( gas === "ozone" ) { unit = "ozone unit"; }
-    if ( gas === "nitrogendioxide" ) { unit = "nitrogendioxide unit"; }
+    if ( gas === "methane" ) { unit = ""; }
+    if ( gas === "ozone" ) { unit = ""; }
+    if ( gas === "nitrogendioxide" ) { unit = ""; }
     if ( gas === "carbonmonoxide" ) { unit = "mol/m2"; }
 
     const gasCapitalized = gas.charAt(0).toUpperCase() + gas.slice(1);
