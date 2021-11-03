@@ -1,5 +1,5 @@
 import useFetch from '../hooks/useFetch';
-import LineChart from './LineChart';
+import SentinelSP5LineChart from './SentinelSP5LineChart';
 import countryCodes from '../country-codes.json';
 
 function Emissions({ country, gas, begin, end }) {
@@ -15,10 +15,10 @@ function Emissions({ country, gas, begin, end }) {
     data.sort( (a, b) => { return new Date(a.start) - new Date(b.start) } );
 
     let unit = "unit";
-    if ( gas === "methane" ) { unit = "mol/m2"; }
-    if ( gas === "ozone" ) { unit = "mol/m2"; }
-    if ( gas === "nitrogendioxide" ) { unit = "micromol/m2"; }
-    if ( gas === "carbonmonoxide" ) { unit = "mol/m2"; }
+    if ( gas === "methane" ) { unit = "mol"; }
+    if ( gas === "ozone" ) { unit = "mol"; }
+    if ( gas === "nitrogendioxide" ) { unit = "mol"; }
+    if ( gas === "carbonmonoxide" ) { unit = "mol"; }
 
     const gasCapitalized = gas.charAt(0).toUpperCase() + gas.slice(1);
     
@@ -32,12 +32,21 @@ function Emissions({ country, gas, begin, end }) {
     }
     countryCodes.map( getCountryName );
 
-    return(
-        <>
-            <p className="chart-title">{countryName} {gasCapitalized} Emissions ({begin} to {end})</p>
-            <LineChart data={data} gas={gas} unit={unit} />
-        </>
-    )
+    if ( gas === "nitrogendioxide" ) {
+        return (
+            <>
+                <p className="chart-title">{countryName} {gasCapitalized} Emissions [&micro;{unit}/m<sup>2</sup>], {begin} to {end}</p>
+                <SentinelSP5LineChart data={data} gas={gas} unit={unit} />
+            </>
+        ) 
+    } else {
+        return (
+            <>
+                <p className="chart-title">{countryName} {gasCapitalized} Emissions [{unit}/m<sup>2</sup>], {begin} to {end}</p>
+                <SentinelSP5LineChart data={data} gas={gas} unit={unit} />
+            </>
+        )
+    }
 }
 
 export default function SentinelSP5Chart({ country, gas, begin, end }) {
