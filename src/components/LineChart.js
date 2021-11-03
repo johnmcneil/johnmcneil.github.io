@@ -7,6 +7,13 @@ const Chart = ({ data, gas, unit }) => {
 	const gasCapitalized = gas.charAt(0).toUpperCase() + gas.slice(1);
 	const yAxisLabel = gasCapitalized + " [" + unit + "]";
 
+	if ( gas === "nitrogendioxide" ) { 
+		data.map( (item) => { 
+			let micromole = item.average * 1000;
+			item.average = micromole;
+		})
+	}
+
 	return (
 		<LineChart width={600} height={400} data={data} margin={{ top:0, right: 30, left: 30, bottom: 30}}>
 			<Line
