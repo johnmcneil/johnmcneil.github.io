@@ -26,7 +26,7 @@ const portfolioData = [
 	{
 		id: "3",
 		src: sentinelsp5, 
-		href: "https://johnmcneil.github.io/#/sentinelsp5"
+		href: "/#/sentinelsp5"
 	},
 	{
 		id: "4",
