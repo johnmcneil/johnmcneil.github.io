@@ -51,7 +51,7 @@ function Emissions({ country, gas, begin, end }) {
         return (
             <>
                 <p className="chart-title">{countryName} {gasCapitalized(gas)} Emissions [{unit}/m<sup>2</sup>], {begin} to {end}</p>
-                <SentinelSP5LineChart data={data} gas={gas} />
+                <SentinelSP5LineChart data={data} gas={gas} unit={unit}/>
             </>
         )
     }
