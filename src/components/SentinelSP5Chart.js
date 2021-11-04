@@ -20,8 +20,16 @@ function Emissions({ country, gas, begin, end }) {
     if ( gas === "nitrogendioxide" ) { unit = "mol"; }
     if ( gas === "carbonmonoxide" ) { unit = "mol"; }
 
-    const gasCapitalized = gas.charAt(0).toUpperCase() + gas.slice(1);
+    const gasCapitalized = (gas) => {
+        if ( gas === "nitrogendioxide" ) {
+            return "Nitrogen Dioxide";
+        } else {
+            return gas.charAt(0).toUpperCase() + gas.slice(1);
+        }
+    }
     
+    console.log("gasCapitalized", gasCapitalized);
+
     let countryName = "countryName";
     const countryCapitalized = country.toUpperCase();
     
@@ -35,14 +43,14 @@ function Emissions({ country, gas, begin, end }) {
     if ( gas === "nitrogendioxide" ) {
         return (
             <>
-                <p className="chart-title">{countryName} {gasCapitalized} Emissions [&micro;{unit}/m<sup>2</sup>], {begin} to {end}</p>
+                <p className="chart-title">{countryName} {gasCapitalized(gas)} Emissions [&micro;{unit}/m<sup>2</sup>], {begin} to {end}</p>
                 <SentinelSP5LineChart data={data} gas={gas} unit={unit} />
             </>
         ) 
     } else {
         return (
             <>
-                <p className="chart-title">{countryName} {gasCapitalized} Emissions [{unit}/m<sup>2</sup>], {begin} to {end}</p>
+                <p className="chart-title">{countryName} {gasCapitalized(gas)} Emissions [{unit}/m<sup>2</sup>], {begin} to {end}</p>
                 <SentinelSP5LineChart data={data} gas={gas} />
             </>
         )
