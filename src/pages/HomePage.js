@@ -51,7 +51,7 @@ const portfolioData = [
 	{
 		id: "8",
 		src: johnmcneilme,
-		href: "https://www.johnmcneil.me"
+		href: "https://www.johnmcneil.me/ajax-news/"
 	},
 	{
 		id: "9",
