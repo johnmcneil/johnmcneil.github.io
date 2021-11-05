@@ -17,7 +17,7 @@ export default function ClimateTraceChart({ country }) {
 	console.log("country", country);
 
 	let countryData = [];
-	function getCountryMatch( item ) {
+	const getCountryMatch = item =>  {
 		if ( item.country === country ) {
 			countryData = [ item.emissions[5], 
 							item.emissions[4], 
@@ -32,11 +32,9 @@ export default function ClimateTraceChart({ country }) {
 
 	console.log("countryData", countryData);
 
-
-
 	return(
 		<>
-			<p className="chart-title">{country} Emissions</p>
+			<p className="chart-title">{country} Emissions [tCO<sup>2</sup> equivalent]</p>
 			<LineChart width={600} height={400} data={countryData} margin={{ top:0, right: 30, left: 30, bottom: 30}}>
 				<Line
 					dataKey="value"
