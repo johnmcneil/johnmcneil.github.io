@@ -30,6 +30,9 @@ export default function ClimateTraceChart({ country }) {
 
 	data.map( getCountryMatch );
 
+
+
+
 	console.log("countryData", countryData);
 
 	return(
