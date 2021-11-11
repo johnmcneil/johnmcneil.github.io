@@ -4,6 +4,7 @@ import countryCodes from '../country-codes.json';
 
 function Emissions({ country, gas, begin, end }) {
     console.log("country", country, "gas", gas, "begin", begin, "end", end);
+
     const { loading, data, error } = useFetch(
         `https://api.v2.emissions-api.org/api/v2/${gas}/average.json?country=${country}&begin=${begin}&end=${end}`
     );
@@ -12,13 +13,40 @@ function Emissions({ country, gas, begin, end }) {
     if (error)
         return <pre>{JSON.stringify(error, null, 2)}</pre>;
 
-    data.sort( (a, b) => { return new Date(a.start) - new Date(b.start) } );
+    const sortAscending = input => input.sort( (a, b) => { return new Date(a.start) - new Date(b.start) } );
 
-    let unit = "unit";
-    if ( gas === "methane" ) { unit = "mol"; }
-    if ( gas === "ozone" ) { unit = "mol"; }
-    if ( gas === "nitrogendioxide" ) { unit = "mol"; }
-    if ( gas === "carbonmonoxide" ) { unit = "mol"; }
+    const moleToMicroMole = input => input * 1000000;
+
+    const correctUnit = (inputData) => {
+        let outputData = {};
+        console.log("inputData", inputData);
+        if ( gas === "nitrogendioxide" ) {
+            outputData = inputData.map( item => {
+                let microMole = moleToMicroMole(item.average);
+                item['chartThis'] = microMole;
+                return item;
+            });
+        } else {
+            outputData = inputData.map( item => {
+                item['chartThis'] = item['average'];
+                return item;
+            });
+        }       
+
+        return ( outputData );
+    }
+   
+    const compose = (...fns) => arg => 
+        fns.reduce((composed, f) => f(composed), arg);
+
+    const prepareChartData = compose(
+        sortAscending,
+        correctUnit
+    );
+
+    const chartData = prepareChartData(data);
+
+    console.log("chartData", chartData);
 
     const gasCapitalized = (gas) => {
         if ( gas === "nitrogendioxide" ) {
@@ -43,15 +71,15 @@ function Emissions({ country, gas, begin, end }) {
     if ( gas === "nitrogendioxide" ) {
         return (
             <>
-                <p className="chart-title">{countryName} {gasCapitalized(gas)} Emissions [&micro;{unit}/m<sup>2</sup>], {begin} to {end}</p>
-                <SentinelSP5LineChart data={data} gas={gas} unit={unit} />
+                <p className="chart-title">{countryName} {gasCapitalized(gas)} Emissions [&micro;mol/m<sup>2</sup>], {begin} to {end}</p>
+                <SentinelSP5LineChart chartData={chartData} />
             </>
         ) 
     } else {
         return (
             <>
-                <p className="chart-title">{countryName} {gasCapitalized(gas)} Emissions [{unit}/m<sup>2</sup>], {begin} to {end}</p>
-                <SentinelSP5LineChart data={data} gas={gas} unit={unit}/>
+                <p className="chart-title">{countryName} {gasCapitalized(gas)} Emissions [mol/m<sup>2</sup>], {begin} to {end}</p>
+                <SentinelSP5LineChart chartData={chartData} />
             </>
         )
     }
