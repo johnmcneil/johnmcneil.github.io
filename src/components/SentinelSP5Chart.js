@@ -17,56 +17,49 @@ function Emissions({ country, gas, begin, end }) {
     const sortAscending = input => input.sort( (a, b) => { return new Date(a.start) - new Date(b.start) } );
 
     const moleToMicroMole = (inputData) => {
-        let outputData = {};
+        console.log("inputData", inputData);
+        let outputData = [];
         outputData = inputData.map( item => {
-            let microMole = moleToMicroMole(item.average);
-            item['chartThis'] = item['average'];
+            item['chartThis'] = item.average * 1000000;
             return item;
         });
+        return outputData;
     }
 
     const moleToMole = (inputData) => {
-        let outputData = {};
+        let outputData = [];
         outputData = inputData.map( item => {
             item['chartThis'] = item['average'];
             return item;
         });
+        return outputData;
     }
 
     const isNO2 = molecule => molecule === "nitrogendioxide" ? true : false;
+    const NO2 = isNO2(gas);
+    console.log("NO2", NO2);
 
     const getCorrectUnit = inputData => {
-        isNO2(gas) ? moleToMicroMole(inputData) : moleToMole(inputData);
+        isNO2 ? moleToMicroMole(inputData) : moleToMole(inputData);
     }
 
-    const correctUnit = (inputData) => {
-        let outputData = {};
 
-        if ( gas === "nitrogendioxide" ) {
-            outputData = inputData.map( item => {
-                let microMole = moleToMicroMole(item.average);
-                item['chartThis'] = microMole;
-                return item;
-            });
-        } else {
-            outputData = inputData.map( item => {
-                item['chartThis'] = item['average'];
-                return item;
-            });
-        }       
+    function prepareChartData(rawData, NO2) {
+        console.log("NO2 inside prepareChartData", NO2);
+        if ( NO2 ) { 
+            const output = moleToMicroMole(sortAscending(rawData)); 
+            console.log("NO2 true. Output is", output);
+            return output;
+        } else { 
+            const output = moleToMole(sortAscending(rawData));
+            console.log("NO2 false. Output is", output);
+            return output;
+        }
 
-        return ( outputData );
-    }
-   
-    const compose = (...fns) => arg => 
-        fns.reduce((composed, f) => f(composed), arg);
+    } 
 
-    const prepareChartData = compose(
-        sortAscending,
-        getCorrectUnit
-    );
+    const chartData = prepareChartData(data, NO2);
 
-    const chartData = prepareChartData(data);
 
     console.log("chartData", chartData);
 
@@ -90,7 +83,7 @@ function Emissions({ country, gas, begin, end }) {
     }
     countryCodes.map( getCountryName );
 
-    if ( isNO2 ) {
+    if ( NO2 ) {
         return (
             <>
                 <p className="chart-title">{countryName} {gasCapitalized(gas)} Emissions [&micro;mol/m<sup>2</sup>], {begin} to {end}</p>
