@@ -16,7 +16,7 @@ function Emissions({ country, gas, begin, end }) {
 
     const sortAscending = input => input.sort( (a, b) => { return new Date(a.start) - new Date(b.start) } );
 
-    const moleToMicroMole = (inputData) => {
+    const moleToMicroMole = inputData => {
         console.log("inputData", inputData);
         let outputData = [];
         outputData = inputData.map( item => {
@@ -63,41 +63,41 @@ function Emissions({ country, gas, begin, end }) {
 
     console.log("chartData", chartData);
 
-    const gasCapitalized = (gas) => {
-        if ( gas === "nitrogendioxide" ) {
+    const capitalizeGas = gas => {
+        if ( NO2 ) {
             return "Nitrogen Dioxide";
-        } else {
-            return gas.charAt(0).toUpperCase() + gas.slice(1);
-        }
+        } 
+        return gas.charAt(0).toUpperCase() + gas.slice(1);
     }
     
-    console.log("gasCapitalized", gasCapitalized);
-
-    let countryName = "countryName";
     const countryCapitalized = country.toUpperCase();
     
     function getCountryName(item) {
+        let countryName = "Country";
         if ( item.code === countryCapitalized ) { 
-            countryName = item.name; 
+            let countryName = item.name;
+            return countryName; 
         }
     }
-    countryCodes.map( getCountryName );
+
+    let countryName = countryCodes.map( getCountryName );
+    const gasCapitalized = capitalizeGas(gas); 
 
     if ( NO2 ) {
         return (
             <>
-                <p className="chart-title">{countryName} {gasCapitalized(gas)} Emissions [&micro;mol/m<sup>2</sup>], {begin} to {end}</p>
+                <p className="chart-title">{countryName} {gasCapitalized} Emissions [&micro;mol/m<sup>2</sup>], {begin} to {end}</p>
                 <SentinelSP5LineChart chartData={chartData} />
             </>
-        ) 
+        ); 
     }
 
     return (
         <>
-            <p className="chart-title">{countryName} {gasCapitalized(gas)} Emissions [mol/m<sup>2</sup>], {begin} to {end}</p>
+            <p className="chart-title">{countryName} {gasCapitalized} Emissions [mol/m<sup>2</sup>], {begin} to {end}</p>
             <SentinelSP5LineChart chartData={chartData} />
         </>
-    )
+    );
 }
 
 export default function SentinelSP5Chart({ country, gas, begin, end }) {
