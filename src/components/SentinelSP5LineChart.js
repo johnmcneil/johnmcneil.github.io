@@ -2,8 +2,7 @@ import React from 'react';
 import { Line, LineChart, CartesianGrid, XAxis, YAxis, Tooltip, Label } from 'recharts';
 import moment from 'moment';
 
-
-const SentinelSP5LineChart = ({ chartData }) => {	
+const SentinelSP5LineChart = ({ chartData, gasCapitalized }) => {
 	return (
 		<>	
 			<LineChart width={600} height={400} data={chartData} margin={{ top:0, right: 30, left: 30, bottom: 30}}>
@@ -17,7 +16,7 @@ const SentinelSP5LineChart = ({ chartData }) => {
 					<Label value="Year and Month (yy-mm)" position="bottom" />
 				</XAxis>
 				<YAxis type="number" domain={['auto', 'auto']} />
-				<Tooltip />
+				<Tooltip label={gasCapitalized} />
 			</LineChart>
 		</>
 	);
