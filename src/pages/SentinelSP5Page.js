@@ -5,10 +5,10 @@ import SentinelSP5SearchForm from '../components/SentinelSP5SearchForm';
 export default function GhgPage() {
 	const [country, setCountry] = useState("us");
 	const [gas, setGas] =  useState("methane");
-	const [begin, setBegin] = useState("2020-01-01");
-	const [end, setEnd] = useState("2021-01-01");
+	const [begin, setBegin] = useState("2021-01-01");
+	const [end, setEnd] = useState("2021-12-01");
 
-	const search = (country, gas, begin, end) => {
+	function handleSearch(country, gas, begin, end) {
 		console.log("search function", country, gas, begin, end);
 		setCountry(country);
 		setGas(gas);
@@ -21,7 +21,7 @@ export default function GhgPage() {
 			<h3>Charting Greenhouse Gas Emissions</h3>
 
 			<p><strong>Query <a href="https://emissions-api.org/">Sentinel-5P satellite data</a>:</strong></p>
-			<SentinelSP5SearchForm onSearch={search}/>
+			<SentinelSP5SearchForm onSearch={handleSearch}/>
 			<SentinelSP5Chart country={country} gas={gas} begin={begin} end={end} />
 
 		</div>
