@@ -9,7 +9,7 @@ export default function SentinelSP5SearchForm({ onSearch = f => f }) {
 	const [beginProps, resetBegin] = useInput("2020-01-01");
 	const [endProps, resetEnd] = useInput("2021-01-01");
 
-	const submit = e => { 
+	function handleSubmit(e) { 
 		e.preventDefault();
 
 		console.log("countryProps", countryProps);
@@ -18,10 +18,10 @@ export default function SentinelSP5SearchForm({ onSearch = f => f }) {
 		console.log("endProps", endProps);
 		
 		onSearch(countryProps.value, gasProps.value, beginProps.value, endProps.value);		
-	};
+	}
 
 	return (
-		<form onSubmit={submit}>
+		<form onSubmit={handleSubmit}>
 			<label>Country:
 				<SelectCountry countryCodes={countryCodes} countryProps={countryProps} />
 			</label>
