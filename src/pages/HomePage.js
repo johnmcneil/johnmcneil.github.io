@@ -17,7 +17,7 @@ import WritingPage from './WritingPage';
 const title = "<John McNeil />";
 const subtitle = "{full-stack web development}";
 
-
+ 
 const portfolioData = [
 	{
 		id: "1",

@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.76476803.chunk.css",
-    "main.js": "/static/js/main.07248ddf.chunk.js",
-    "main.js.map": "/static/js/main.07248ddf.chunk.js.map",
+    "main.js": "/static/js/main.c1d67ec0.chunk.js",
+    "main.js.map": "/static/js/main.c1d67ec0.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.eba101d0.js",
     "runtime-main.js.map": "/static/js/runtime-main.eba101d0.js.map",
     "static/css/2.7b1c032f.chunk.css": "/static/css/2.7b1c032f.chunk.css",
@@ -14,23 +14,23 @@
     "static/css/2.7b1c032f.chunk.css.map": "/static/css/2.7b1c032f.chunk.css.map",
     "static/css/main.76476803.chunk.css.map": "/static/css/main.76476803.chunk.css.map",
     "static/js/2.0b98b330.chunk.js.LICENSE.txt": "/static/js/2.0b98b330.chunk.js.LICENSE.txt",
-    "static/media/chessgraphs.0b3a63a2.png": "/static/media/chessgraphs.0b3a63a2.png",
-    "static/media/climatetrace.b5712fdd.png": "/static/media/climatetrace.b5712fdd.png",
-    "static/media/federalcourt-screenshot.675b7579.png": "/static/media/federalcourt-screenshot.675b7579.png",
-    "static/media/github.637fb31a.png": "/static/media/github.637fb31a.png",
-    "static/media/johnmcneilme.8606cabe.png": "/static/media/johnmcneilme.8606cabe.png",
-    "static/media/kataymeloglu.8aa0e5e3.png": "/static/media/kataymeloglu.8aa0e5e3.png",
-    "static/media/mn350.0c644b12.png": "/static/media/mn350.0c644b12.png",
-    "static/media/mn350action.b8d1015c.png": "/static/media/mn350action.b8d1015c.png",
+    "static/media/chessgraphs.f30e30de.png": "/static/media/chessgraphs.f30e30de.png",
+    "static/media/climatetrace.94eddd00.png": "/static/media/climatetrace.94eddd00.png",
+    "static/media/federalcourt-screenshot.c5415a53.png": "/static/media/federalcourt-screenshot.c5415a53.png",
+    "static/media/github.63223c3c.png": "/static/media/github.63223c3c.png",
+    "static/media/johnmcneilme.b2928b18.png": "/static/media/johnmcneilme.b2928b18.png",
+    "static/media/kataymeloglu.8ce9b582.png": "/static/media/kataymeloglu.8ce9b582.png",
+    "static/media/mn350.258f2703.png": "/static/media/mn350.258f2703.png",
+    "static/media/mn350action.1d50b6fe.png": "/static/media/mn350action.1d50b6fe.png",
     "static/media/qomb.8ffbe7d0.png": "/static/media/qomb.8ffbe7d0.png",
-    "static/media/sentinelsp5.e0e60fb0.png": "/static/media/sentinelsp5.e0e60fb0.png",
-    "static/media/unioncabnemt.5824cb38.png": "/static/media/unioncabnemt.5824cb38.png"
+    "static/media/sentinelsp5.48e35d3e.png": "/static/media/sentinelsp5.48e35d3e.png",
+    "static/media/unioncabnemt.e0484764.png": "/static/media/unioncabnemt.e0484764.png"
   },
   "entrypoints": [
     "static/js/runtime-main.eba101d0.js",
     "static/css/2.7b1c032f.chunk.css",
     "static/js/2.0b98b330.chunk.js",
     "static/css/main.76476803.chunk.css",
-    "static/js/main.07248ddf.chunk.js"
+    "static/js/main.c1d67ec0.chunk.js"
   ]
 }
