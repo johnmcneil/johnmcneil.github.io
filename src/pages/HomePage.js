@@ -12,12 +12,11 @@ import github from '../img/github.png';
 import qomb from '../img/qomb.png';
 import federalcourt from '../img/federalcourt-screenshot.png';
 import unioncabnemt from '../img/unioncabnemt.png';
-import WritingPage from './WritingPage';
 
 const title = "<John McNeil />";
 const subtitle = "{full-stack web development}";
 
- 
+
 const portfolioData = [
 	{
 		id: "1",
