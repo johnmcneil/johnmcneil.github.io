@@ -1,6 +1,7 @@
 import useFetch from '../hooks/useFetch';
-import countryCodes from '../country-codes.json';
-import { useState } from 'react';
+import countryCodes from '../json/country-codes.json';
+import states from '../json/us_states_500k.json';
+import counties from '../json/us_counties_500k.json';
 import React from 'react';
 import { Line, LineChart, CartesianGrid, XAxis, YAxis, Tooltip, Label } from 'recharts';
 import moment from 'moment';

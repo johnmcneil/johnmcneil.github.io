@@ -1,5 +1,5 @@
 import useInput from '../hooks/useInput';
-import countryCodes3Letter from '../country-codes-3letter.json';
+import countryCodes3Letter from '../json/country-codes-3letter.json';
 import SelectCountry from './SelectCountry';
 
 
