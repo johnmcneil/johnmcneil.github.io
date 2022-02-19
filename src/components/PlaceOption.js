@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function CountryOption({
+export default function PlaceOption({
 	name,
 	code
 }) {

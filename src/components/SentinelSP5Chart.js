@@ -66,7 +66,7 @@ export default function SentinelSP5Chart({ country, gas, begin, end }) {
     } 
 
     const chartData = prepareChartData(dataAscending, NO2);
-
+    
 
 
     console.log("chartData", chartData);
@@ -114,7 +114,7 @@ export default function SentinelSP5Chart({ country, gas, begin, end }) {
 
     return (
         <>
-            <p className="chart-title">{countryName} {gasCapitalized} Emissions [mol/m<sup>2</sup>], {begin} to {end}</p>
+            <p className="chart-title">{countryName} {"\u00B5"} {gasCapitalized} Emissions [mol/m<sup>2</sup>], {begin} to {end}</p>
             <LineChart width={600} height={400} data={chartData} margin={{ top:0, right: 30, left: 30, bottom: 30}}>
                 <Line
                     dataKey="chartThis"

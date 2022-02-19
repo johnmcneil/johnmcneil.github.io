@@ -1,10 +1,13 @@
 import useInput from '../hooks/useInput';
 import countryCodes from '../json/country-codes.json';
-import SelectCountry from './SelectCountry';
-
+import stateUsaCodes from '../json/us-state-codes.json';
+import SelectCountry
+ from './SelectCountry';
+import SelectStateUsa from './SelectStateUsa';
 
 export default function SentinelSP5SearchForm({ onSearch = f => f }) {
 	const [countryProps, resetCountry] = useInput("us");
+	const [stateUSAProps, resetStateUSA] = useInput("mn");
 	const [gasProps, resetGas] = useInput("methane");
 	const [beginProps, resetBegin] = useInput("2020-01-01");
 	const [endProps, resetEnd] = useInput("2021-01-01");
@@ -24,6 +27,9 @@ export default function SentinelSP5SearchForm({ onSearch = f => f }) {
 		<form onSubmit={handleSubmit}>
 			<label>Country:
 				<SelectCountry countryCodes={countryCodes} countryProps={countryProps} />
+			</label>
+			<label>USA State:
+				<SelectStateUsa stateUsaCodes={stateUsaCodes} stateUsaProps={stateUSAProps} />
 			</label>
 			<label>Gas:
 				<select

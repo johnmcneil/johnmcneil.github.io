@@ -1,5 +1,5 @@
 import React from 'react';
-import CountryOption from './CountryOption';
+import PlaceOption from './PlaceOption';
 
 
 export default function SelectCountry({
@@ -16,7 +16,7 @@ export default function SelectCountry({
 			>
 		{
 			countryCodes.map((country) => (
-				<CountryOption {...country} />
+				<PlaceOption {...country} />
 		))}
 		</select>
 	);
