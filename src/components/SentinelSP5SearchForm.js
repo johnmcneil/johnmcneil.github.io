@@ -1,5 +1,5 @@
 import useInput from '../hooks/useInput';
-import countryCodes from '../country-codes.json';
+import countryCodes from '../json/country-codes.json';
 import SelectCountry from './SelectCountry';
 
 
