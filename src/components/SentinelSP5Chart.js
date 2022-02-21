@@ -25,7 +25,7 @@ export default function SentinelSP5Chart({ country, stateUsa = "Wyoming", gas, b
         const latLonString = latLon.join("&polygon=");
         console.log("latLonString", latLonString);
         
-        var uri = `https://api.v2.emissions-api.org/api/v2/${gas}/geo.json?polygon=${latLonString}&begin=${begin}&end=${end}`;
+        var uri = `https://api.v2.emissions-api.org/api/v2/${gas}/average.json?polygon=${latLonString}&begin=${begin}&end=${end}`;
         console.log("uri", uri);
     } else {
         var uri = `https://api.v2.emissions-api.org/api/v2/${gas}/average.json?country=${country}&begin=${begin}&end=${end}`; 
