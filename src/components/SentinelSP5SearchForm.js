@@ -1,13 +1,17 @@
 import useInput from '../hooks/useInput';
 import countryCodes from '../json/country-codes.json';
 import stateUsaCodes from '../json/us-state-codes.json';
-import SelectCountry
- from './SelectCountry';
+import cityUsaCodes from '../json/us_city_county_latlng.json';
+import usCityCountyLatLon from '../json/us_city_county_latlng.json';
+import SelectCountry from './SelectCountry';
 import SelectStateUsa from './SelectStateUsa';
+import SelectCityUsa from './SelectCityUsa';
+
 
 export default function SentinelSP5SearchForm({ onSearch = f => f }) {
 	const [countryProps, resetCountry] = useInput("us");
-	const [stateUSAProps, resetStateUSA] = useInput("mn");
+	const [stateUSAProps, resetStateUSA] = useInput("");
+	const [cityUSAProps, resetCityUSAProps] = useInput("");
 	const [gasProps, resetGas] = useInput("methane");
 	const [beginProps, resetBegin] = useInput("2020-01-01");
 	const [endProps, resetEnd] = useInput("2021-01-01");
@@ -30,6 +34,9 @@ export default function SentinelSP5SearchForm({ onSearch = f => f }) {
 			</label>
 			<label>USA State:
 				<SelectStateUsa stateUsaCodes={stateUsaCodes} stateUsaProps={stateUSAProps} />
+			</label>
+			<label>USA City:
+				<SelectCityUsa stateUsaCodes={stateUsaCodes} stateUsaProps={stateUSAProps} cityCountyCodes={usCityCountyLatLon} />
 			</label>
 			<label>Gas:
 				<select
