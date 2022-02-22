@@ -7,30 +7,11 @@ import { Line, LineChart, CartesianGrid, XAxis, YAxis, Tooltip, Label } from 're
 import moment from 'moment';
 
 
-export default function SentinelSP5Chart({ country, stateUsa = "Wyoming", gas, begin, end }) {
-    console.log("country", country, "stateUsa", stateUsa, "gas", gas, "begin", begin, "end", end);
+export default function SentinelSP5Chart({ country, gas, begin, end }) {
+    console.log("country", country, "gas", gas, "begin", begin, "end", end);
 
-    if ( stateUsa !== "--" ) {
-        const statesArray = states.features;
-        const getLatLon = function(statesArray, stateUsa) {
-            let thisUsState = statesArray.filter(state => state.properties.NAME === stateUsa);
-            console.log("thisUsState", thisUsState);
-            let coordinates = thisUsState[0].geometry.coordinates;
-            return coordinates;
-        }    
-
-        const latLon = getLatLon(statesArray, stateUsa);
-        console.log("latLon", latLon);
-        
-        const latLonString = latLon.join("&polygon=");
-        console.log("latLonString", latLonString);
-        
-        var uri = `https://api.v2.emissions-api.org/api/v2/${gas}/average.json?polygon=${latLonString}&begin=${begin}&end=${end}`;
-        console.log("uri", uri);
-    } else {
-        var uri = `https://api.v2.emissions-api.org/api/v2/${gas}/average.json?country=${country}&begin=${begin}&end=${end}`; 
-        console.log("uri", uri);
-    }
+    let uri = `https://api.v2.emissions-api.org/api/v2/${gas}/average.json?country=${country}&begin=${begin}&end=${end}`; 
+    console.log("uri", uri); 
 
     const { loading, data, error } = useFetch(uri);
 

@@ -9,9 +9,7 @@ export default function SelectCityUsa({
     stateUsaProps = {}
 }) {
     console.log("cityUsaProps", cityUsaProps);
-    getCitiesOfThisState = function(thisState, cityUsaData) {
-        cityUsaData.filter();      
-    })
+
     return (
         <select
             {...cityUsaProps}
