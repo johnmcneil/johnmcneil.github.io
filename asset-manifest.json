@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/static/css/main.76476803.chunk.css",
-    "main.js": "/static/js/main.400ac3a8.chunk.js",
-    "main.js.map": "/static/js/main.400ac3a8.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.85bd5074.js",
-    "runtime-main.js.map": "/static/js/runtime-main.85bd5074.js.map",
+    "main.js": "/static/js/main.653972f7.chunk.js",
+    "main.js.map": "/static/js/main.653972f7.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.6cc36286.js",
+    "runtime-main.js.map": "/static/js/runtime-main.6cc36286.js.map",
     "static/css/2.7b1c032f.chunk.css": "/static/css/2.7b1c032f.chunk.css",
-    "static/js/2.9f9ca038.chunk.js": "/static/js/2.9f9ca038.chunk.js",
-    "static/js/2.9f9ca038.chunk.js.map": "/static/js/2.9f9ca038.chunk.js.map",
-    "static/js/3.75ed1908.chunk.js": "/static/js/3.75ed1908.chunk.js",
-    "static/js/3.75ed1908.chunk.js.map": "/static/js/3.75ed1908.chunk.js.map",
+    "static/js/2.890512c0.chunk.js": "/static/js/2.890512c0.chunk.js",
+    "static/js/2.890512c0.chunk.js.map": "/static/js/2.890512c0.chunk.js.map",
+    "static/js/3.59c2ec9b.chunk.js": "/static/js/3.59c2ec9b.chunk.js",
+    "static/js/3.59c2ec9b.chunk.js.map": "/static/js/3.59c2ec9b.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.7b1c032f.chunk.css.map": "/static/css/2.7b1c032f.chunk.css.map",
     "static/css/main.76476803.chunk.css.map": "/static/css/main.76476803.chunk.css.map",
-    "static/js/2.9f9ca038.chunk.js.LICENSE.txt": "/static/js/2.9f9ca038.chunk.js.LICENSE.txt",
+    "static/js/2.890512c0.chunk.js.LICENSE.txt": "/static/js/2.890512c0.chunk.js.LICENSE.txt",
     "static/media/chessgraphs.f30e30de.png": "/static/media/chessgraphs.f30e30de.png",
     "static/media/climatetrace.94eddd00.png": "/static/media/climatetrace.94eddd00.png",
     "static/media/federalcourt-screenshot.c5415a53.png": "/static/media/federalcourt-screenshot.c5415a53.png",
@@ -27,10 +27,10 @@
     "static/media/unioncabnemt.e0484764.png": "/static/media/unioncabnemt.e0484764.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.85bd5074.js",
+    "static/js/runtime-main.6cc36286.js",
     "static/css/2.7b1c032f.chunk.css",
-    "static/js/2.9f9ca038.chunk.js",
+    "static/js/2.890512c0.chunk.js",
     "static/css/main.76476803.chunk.css",
-    "static/js/main.400ac3a8.chunk.js"
+    "static/js/main.653972f7.chunk.js"
   ]
 }
